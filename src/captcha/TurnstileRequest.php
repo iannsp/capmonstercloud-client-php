@@ -11,7 +11,13 @@ class TurnstileRequest extends CaptchaRequest {
         string $proxyAddress = null,
         int $proxyPort = null,
         string $proxyLogin = null,
-        string $proxyPassword = null
+        string $proxyPassword = null,
+        string $cloudflareTaskType = null,
+        string $htmlPageBase64 = null,
+        string $userAgent = null,
+        string $pageAction = null,
+        string $data = null,
+        string $pageData = null
     ) {
         $options = $this->clearInput([
             "websiteURL" => $websiteURL,
@@ -20,7 +26,13 @@ class TurnstileRequest extends CaptchaRequest {
             "proxyAddress" => $proxyAddress,
             "proxyPort" => $proxyPort,
             "proxyLogin" => $proxyLogin,
-            "proxyPassword" => $proxyPassword
+            "proxyPassword" => $proxyPassword,
+            "cloudflareTaskType" => $cloudflareTaskType,
+            "htmlPageBase64" => $htmlPageBase64,
+            "userAgent" => $userAgent,
+            "pageAction" => $pageAction,
+            "data" => $data,
+            "pageData" => $pageData
         ]);
         CaptchaRequest::__construct($this->detectProxy($options, "TurnstileTask", "TurnstileTaskProxyless"), $options);
     }
