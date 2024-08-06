@@ -5,7 +5,6 @@ class Networker {
 
     protected function postRequest(string $url, array $payload, string $userAgent, array $ignoredHttpCodes = []) : string {
         $jsonPayload = json_encode($payload);
-        print_r($payload);
         $ch = curl_init($url);
 
         curl_setopt_array($ch, array(
