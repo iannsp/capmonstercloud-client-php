@@ -21,4 +21,4 @@ jobs:
       env:
         CLIENT_KEY: ${{secrets.CLIENT_KEY}}
       with:
-        configuration: ./client/tests/phpunit.xml
+        configuration: ./tests/phpunit.xml
