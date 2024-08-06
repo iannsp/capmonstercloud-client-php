@@ -5,7 +5,7 @@
     namespace ZennoLab\CapMonster; 
 
     require __DIR__.'/vendor/autoload.php'   
-    $client = new Client(iget_env("your_client_key"));
+    $client = new Client(get_env("your_client_key"));
 
     //solve image captcha
     $body = "base64_captcha_image";
